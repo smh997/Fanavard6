@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    // we use long long int to be sure code runs truly for big test cases.
     // n object, m boxes and each box has k capacity.
     long long int n, m , k; 
     // cnt: number of boxes we need for a selected j.
@@ -26,7 +27,7 @@ int main()
         // initialize cnt and cap for start calculate if it is possible to do the algorithm say in the problem.
         cnt = 1;
         cap = 0;
-        // do the algorithm say in the problem.
+        // do the algorithm say in the problem. O(n)
         for (int i = mid; i < n; ++i) {
             // if current box has space to contain i-th object: put the object in the box.
             if(cap + a[i] <= k){
@@ -51,8 +52,3 @@ int main()
     
     return 0;
 }
-//5 2 6
-//5 2 1 4 2
-
-//5 1 4
-//4 2 3 4 1
